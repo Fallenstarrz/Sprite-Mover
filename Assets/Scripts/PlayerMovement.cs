@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame 
 	void Update () 
 	{
-		// This code rotates the character. We commented it out for now, because the instructions were rather vague.
+		// This code rotates the character. We commented it out for now, because we don't want this script for the assignment, but it was good for testing local scale and want to use as an example later.
 		// transform.Rotate (0, 0, 1 * Time.deltaTime * turnSpeed * Input.GetAxis("Horizontal") * -1);
 
 		// This code should move a single unit when shift + directional arrow is pressed
