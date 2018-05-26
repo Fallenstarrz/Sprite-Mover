@@ -13,6 +13,7 @@ public class ExitGame : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		// This closes the application cleanly
 		if (Input.GetKeyDown (KeyCode.Escape)) 
 		{
 			Application.Quit();

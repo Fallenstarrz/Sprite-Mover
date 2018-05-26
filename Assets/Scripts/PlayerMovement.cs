@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 	public float moveSpeed = 3.0f;  // This variable is the default move speed (unity units per update, but when multiplied by deltatime it is roughly units per second)
-	// public float turnSpeed = 90.0f; // This variable is the default turn rate (degrees per update, but when multiplied by deltatime it is roughly degrees per second) Commented out due to inconsistent instructions
+	public float turnSpeed = 90.0f; // This variable is the default turn rate (degrees per update, but when multiplied by deltatime it is roughly degrees per second) Commented out due to inconsistent instructions
 
 	// Use this for initialization
 	void Start () 
@@ -16,9 +16,6 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame 
 	void Update () 
 	{
-		// This code rotates the character. We commented it out for now, because we don't want this script for the assignment, but it was good for testing local scale and want to use as an example later.
-		// transform.Rotate (0, 0, 1 * Time.deltaTime * turnSpeed * Input.GetAxis("Horizontal") * -1);
-
 		// This code should move a single unit when shift + directional arrow is pressed
 		// Note: Shift may be held
 		if (Input.GetKey (KeyCode.LeftShift)) 				// if shift is held, don't do else statement below
@@ -49,6 +46,9 @@ public class PlayerMovement : MonoBehaviour {
 			// If get axis is 0 nothing happens because when everything is multiplied with 0 it becomes 0, so no movement happens.
 			transform.Translate (0, Time.deltaTime * moveSpeed * Input.GetAxis ("Vertical"), 0);
 			transform.Translate (Time.deltaTime * moveSpeed * Input.GetAxis("Horizontal"), 0, 0);
+
+			// This code rotates the character. We commented it out for now, because we don't want this script for the assignment, but it was good for testing local scale and want to use as an example later.
+			//transform.Rotate (0, 0, 1 * Time.deltaTime * turnSpeed * Input.GetAxis("Horizontal") * -1);
 		}
 	}
 }
